@@ -1,0 +1,141 @@
+:root{
+    --vermelho: #e50914;
+    --preta: #050505;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/*elementos base*/
+body{
+    background: var(--preta);
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+header .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+
+.container img{
+    width: 240px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: #aaa;
+    margin-right: 10px;
+}
+
+header nav a:hover{
+    color: #fff
+}
+
+/*filme principal*/
+.filme-principal{   
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%),url('C:/Users/User/Desktop/meus_projetos/Clone-da-Netflix/img/imagem-de-fundo.jpg');
+    height: 550px;
+    background-size: cover;  
+    display: flex; 
+    flex-direction: column;  
+    justify-content: center;
+    align-items: flex-start;
+}
+
+main .container{
+    margin: 20px;
+}
+
+.filme-principal .descricao{     
+    margin-bottom: 40px;
+}
+
+.filme-principal .titulo{   
+    font-size: 40px;
+}
+
+.botao{
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    margin-right: 15px;    
+    font-size: 12px;
+    cursor: pointer;
+    transition: .3s ease all;
+    text-decoration: none;     
+}
+
+.botao a:visited{
+     color: inherit ; 
+}
+
+.botao:hover{
+    background-color: white;
+    color: black;    
+}
+
+.botao i{
+    margin-right: 8px;
+}
+
+.filme-principal .container{
+    width: 70%;
+}
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrossel-filmes{
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 700px){
+    header .container{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .botao{
+        margin-top: 5px;
+        width: 300px;
+    }
+
+    .box-filme{
+        width: 100%;
+        display: block;
+    }    
+} 
+
+@media screen and (max-width: 500px){
+
+    .filme-principal{background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%),url('C:/Users/User/Desktop/meus_projetos/Clone-da-Netflix/img/imagem-de-fundo-mobile.jpg');
+    }
+
+    .filme-principal .titulo{       
+        font-size: 30px; 
+        margin-top: 20px;               
+    }
+
+    .filme-principal .descricao{   
+        font-size: 14px;    
+    }
+
+    .filme-principal{
+        align-items: center;
+        justify-content: center;             
+    }    
+}
